@@ -1,5 +1,6 @@
 # Fine_Particulate_Matter_Assignment
-Coursera Exploratory Data Analysis Assignment **The Following Directions were taking verbatim Johns Hopkins Coursera Course
+Coursera Exploratory Data Analysis Assignment <br />
+**The Following Directions were taking from the Johns Hopkins Coursera Data Sciene Specialization verbatim
 
 
 # Introduction
