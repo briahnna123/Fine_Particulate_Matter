@@ -1,4 +1,4 @@
-# Fine_Particulate_Matter_Assignment
+# Fine Particulate Matter Assignment
 Coursera Exploratory Data Analysis Assignment <br />
 **The Following Directions were taking from the Johns Hopkins Coursera Data Sciene Specialization verbatim
 
