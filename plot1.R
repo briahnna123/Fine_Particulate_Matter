@@ -20,6 +20,14 @@ NEI <- readRDS("summarySCC_PM25.rds") # Bring in data
 
 # Step 2: Create Plot
 NEI$year <- as.factor(NEI$year) # Make year into factor
+cc<- tapply(NEI$Emissions, NEI$year, sum, simplify=FALSE)
 
-with(NEI, plot(Emissions, year, xlab="Emissions", ylab="Years"))
+with(NEI, plot(year, Emissions/10E05, ylab="Emissions (tons)", xlab="Years"))
 title(main="Scatter Plot of Emmisions over Years")
+png(filename="plot1.R", width=490, height=490, units="px")
+dev.off()
+
+
+
+
+
