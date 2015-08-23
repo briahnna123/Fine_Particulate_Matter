@@ -44,7 +44,7 @@ sub_data[sub_data == "06037"] <- "Los Angeles" # Convert Number Holds to Meaning
 sub_data[sub_data == "24510"] <- "Baltimore"   # Convert Number Holds to Meaningful values
 
 # Step 3: Create the plot
-png(filename= "plot3.png", width=480, height=480, units="px") # Set image format
+png(filename= "plot6.png", width=480, height=480, units="px") # Set image format
 compare<- qplot(Year, Emissions, data=sub_data, color=City, size=I(3),
                   main= "Comparison Emission's Trend Los Angeles Versus Baltimore City" )
 compare <- compare+ geom_smooth(aes(group=City), method="loess", se=FALSE)

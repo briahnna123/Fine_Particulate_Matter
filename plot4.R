@@ -32,7 +32,7 @@ sub_data <- sub_data %>% filter(EI.Sector== "Fuel Comb - Comm/Institutional - Co
 sub_data <- sub_data[-c(5),]  # Remove Unwanted Row
 
 # Step 3: Create the plot
-png(filename= "plot3.png", width=480, height=480, units="px") # Set image format
+png(filename= "plot4.png", width=480, height=480, units="px") # Set image format
 graph <- ggplot(data=sub_data, aes(x=year, y=Emissions, fill=year)) 
 graph <- graph+ geom_bar(stat="identity", position=position_dodge()) 
 graph <- graph+ ggtitle("Emissions via Coal Related Sources")

@@ -41,7 +41,7 @@ sub_data <- sub %>% group_by(year) %>% summarize(Emissions= sum(Emissions, na.rm
 
 
 # Step 3: Create the plot
-png(filename= "plot3.png", width=480, height=480, units="px") # Set image format
+png(filename= "plot5.png", width=480, height=480, units="px") # Set image format
 graph <- ggplot(data=sub_data, aes(x=year, y=Emissions, fill=year)) 
 graph <- graph+ geom_bar(stat="identity", position=position_dodge()) 
 graph <- graph+ ggtitle("Baltimore Emissions via Automobile")
