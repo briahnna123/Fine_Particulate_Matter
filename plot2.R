@@ -30,7 +30,13 @@ names(data)[2] <- "Emissions" # Rename the Column
 
 # Step 3: Create the plot
 png(filename= "plot1.png", width=480, height=480, units="px") # Set pic format
-
+par(mar=c(5, 5, 4.1, 3)) # Adjust the Margin sizes
+plot(data, type= "b", pch= 15, col= "turquoise2", yaxt="n", xaxt="n",
+     xlab="Years", ylab= "Total Emissions PM2.5(Tons)")
+title(main="Maryland's Emmisions by Years", col.main="turquoise2")
+axis(2, at=c(seq(from=1000,to=4000, by=200)), cex.axis=.55 ) # Add Y axis labels
+axis(1, at= c(1999, 2002, 2005, 2008), cex.axis=.90) # Add X axis Labels
+dev.off() # Close Graphics and Show Plot WD
 
 
 
