@@ -27,7 +27,7 @@ names(data)[1] <- "Year" # Rename the Column
 names(data)[2] <- "Emissions" # Rename the Column
                                         
 # Step 3: Create the plot
-png(filename= "plot1.png", width=480, height=480, units="px") # Set pic format
+png(filename= "plot1.png", width=480, height=480, units="px") # Set image format
 par(mar=c(5, 5, 4.1, 3)) # Adjust the Margin sizes
 plot(data, type= "b", pch= 15, col= "palevioletred1", yaxt="n", xaxt="n",
      xlab="Years", ylab= "Emissions (Tons)")
