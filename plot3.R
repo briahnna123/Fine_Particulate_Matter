@@ -30,18 +30,28 @@ sub_data <- data %>% group_by(year, type) %>% summarize(Emissions= sum(Emissions
 
 # Step 3: Create the plot
 png(filename= "plot1.png", width=480, height=480, units="px") # Set pic format
+baltimore<- qplot(year, Emissions, data=sub_data, color=type, size=I(3),
+                  main= "Emission's Trend in Baltimore City across Type" )
+baltimore <- baltimore+ geom_smooth(aes(group=type), method="lm", se=FALSE)
+baltimore <- baltimore+ facet_wrap(~type)
+print(baltimore)
+dev.off()
+
+# Alternative #3
 qplot(x=year, y= Emissions, data= sub_data, facets= .~type,
       col=type, main= "Emission's Trend in Baltimore City across Type",
       size=I(5))
 
 
-
-
+# Alternative #2
 q <- ggplot(sub_data, aes(year, Emissions, color=type))
-p <- q + geom_point() + facet_wrap(~type) + geom_smooth(method= "lm") + theme(axis.text.x= element_text(angle=45, size=10)) 
+p <- q + geom_point() + facet_wrap(~type) + theme(axis.text.x= element_text(angle=45, size=10)) 
 
 
-
+baltimore<- qplot(year, Emissions, data=sub_data, color=type)
+baltimore <- baltimore+ geom_smooth(aes(group=type), method="lm", se=FALSE)
+baltimore <- baltimore+ facet_wrap(~type)
+        
 
 
 
