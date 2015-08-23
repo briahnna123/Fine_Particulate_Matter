@@ -34,7 +34,7 @@ plot(data, type= "b", pch= 15, col= "palevioletred1", yaxt="n", xaxt="n",
 title(main="Plot of Total Emmisions by Years", col.main="palevioletred1")
 axis(2, at=c(3E06, 4E06, 5E06, 6E06, 7E06, 8E06), cex.axis=.75) # Add Y axis labels
 axis(1, at= c(1999, 2002, 2005, 2008), cex.axis=.90) # Add X axis Labels
-dev.off() # Close Graphics and Show Plot WD
+dev.off() # Close Graphics and Show Plot in WD
 
 
 
